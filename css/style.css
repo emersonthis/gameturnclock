@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+/*html,*/
+body {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding: 1em;
+}
+
+
+.turn-clock .labels,
+.turn-clock .numbers {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+.turn-clock .labels {
+    font-size: 1em;
+}
+.turn-clock .label {
+    flex-basis: 33%;
+    flex-grow: 1;
+    text-align: center;
+}
+.turn-clock .numbers {
+    font-size: 20vw;
+}
+.turn-clock .number {
+    flex-basis: 32%;
+    flex-grow: 1;
+}
+.turn-clock .numbers .sep {
+    flex-basis: 2%;
+    flex-shrink: 1;
+}
+.turn-clock .number,
+.turn-clock .sep {
+    text-align: center;
+}
+
+.button {
+    appearance: none;
+    color: #FFF;
+    border-radius: 0;
+    border:none;
+    outline: none;
+    background: #888;
+    padding: 1em;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+}
+
+.button--reset {
+    width: 100%;
+}
+
+.button--playpause {
+
+}
