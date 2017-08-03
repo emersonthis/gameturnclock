@@ -5,8 +5,8 @@
 
 @font-face {
     font-family: 'texta';
-    src: url('fonts/texta_book-webfont.woff2') format('woff2'),
-         url('fonts/texta_book-webfont.woff') format('woff');
+    src: url('../fonts/texta_book-webfont.woff2') format('woff2'),
+         url('../fonts/texta_book-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -50,7 +50,7 @@ body {
 }
 .turn-clock .numbers {
     font-size: 20vw;
-    line-height:1.5;
+    line-height:1;
 }
 .turn-clock .number {
     flex-basis: 32%;
@@ -72,10 +72,15 @@ body {
     border:none;
     outline: none;
     background: #888;
-    padding: 2em;
+    padding: 2vw;
     box-sizing: border-box;
     margin-bottom: 1em;
-    font-size: 100%;
+    font-size: 4vw;
+}
+
+.button svg { 
+    display:inline-block; 
+    height: .8em;
 }
 
 .button--reset {
