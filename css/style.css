@@ -2,11 +2,30 @@
     box-sizing: border-box;
 }
 
+
+@font-face {
+    font-family: 'texta';
+    src: url('fonts/texta_book-webfont.woff2') format('woff2'),
+         url('fonts/texta_book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*@font-face {
+    font-family: 'texta';
+    src: url('fonts/texta_bookit-webfont.woff2') format('woff2'),
+         url('fonts/texta_bookit-webfont.woff') format('woff'),
+    font-weight: normal;
+    font-style: italic;
+}
+*/
+
 /*html,*/
 body {
     font-size: 18px;
     margin: 0;
     padding: 0;
+    font-family: 'texta', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
 .container {
