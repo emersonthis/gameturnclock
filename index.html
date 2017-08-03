@@ -21,9 +21,9 @@
     <turn-clock :seconds="turnSeconds"></turn-clock>
 
     <section class="buttons">
-        <button @click="reset" class="button button--reset">Reset</button>
-        <button @click="toggleSettings" class="button button--settings">Settings</button><!--
-     --><button @click="playOrPause" class="button button--playpause">{{playOrPauseLabel}}</button>
+        <button @click="reset" class="button button--reset">&#8635; Reset</button>
+        <button @click="toggleSettings" class="button button--settings">&#9881; Settings</button><!--
+     --><button @click="playOrPause" class="button button--playpause" v-html="playOrPauseLabel"></button>
     </section>
 
     <section class="settings">
@@ -101,7 +101,7 @@ var app = new Vue({
     },
     computed : {
         playOrPauseLabel : function() {
-            return (this.state == 'pause') ? 'Play' : 'Pause'; 
+            return (this.state == 'pause') ? '&#9654; Play' : '&#9208; Pause'; 
         }
     },
     mounted : function() {

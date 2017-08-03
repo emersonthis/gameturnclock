@@ -5,8 +5,8 @@
 
 @font-face {
     font-family: 'texta';
-    src: url('fonts/texta_book-webfont.woff2') format('woff2'),
-         url('fonts/texta_book-webfont.woff') format('woff');
+    src: url('../fonts/texta_book-webfont.woff2') format('woff2'),
+         url('../fonts/texta_book-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -50,7 +50,7 @@ body {
 }
 .turn-clock .numbers {
     font-size: 20vw;
-    line-height:1.5;
+    line-height:1;
 }
 .turn-clock .number {
     flex-basis: 32%;
