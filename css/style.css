@@ -31,6 +31,7 @@ body {
 }
 .turn-clock .numbers {
     font-size: 20vw;
+    line-height:1.5;
 }
 .turn-clock .number {
     flex-basis: 32%;
@@ -52,7 +53,7 @@ body {
     border:none;
     outline: none;
     background: #888;
-    padding: 1em;
+    padding: 2em;
     box-sizing: border-box;
     margin-bottom: 1em;
     font-size: 100%;
