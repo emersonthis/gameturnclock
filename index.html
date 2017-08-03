@@ -22,7 +22,13 @@
 
     <section class="buttons">
         <button @click="reset" class="button button--reset">Reset</button>
-        <button @click="playOrPause" class="button button--playpause">{{playOrPauseLabel}}</button>
+        <button @click="toggleSettings" class="button button--settings">Settings</button><!--
+     --><button @click="playOrPause" class="button button--playpause">{{playOrPauseLabel}}</button>
+    </section>
+
+    <section class="settings">
+        <label>Turn length (seconds)</label>
+        <input type="number" v-model="totalSeconds" minlength="1" />
     </section>
             
 </div>
@@ -70,14 +76,11 @@ var app = new Vue({
             this.turnSeconds = this.totalSeconds;
         },
         playOrPause : function() {
-            console.log('state',this.state);
-
             if (this.state == 'pause') {
                 this.play();
             } else if (this.state == 'play') {
                 this.pause();
             }
-            console.log('state',this.state);
         },
         play : function(){
             this.timer = setInterval(this.tick, 1000);
@@ -88,7 +91,12 @@ var app = new Vue({
             this.$data.state = 'pause';
         },
         announceTurnOver : function() {
+            var sound = new Audio('sound/boxingbell.mp3');
+            sound.play();
             console.log('TURN OVER!');
+        },
+        toggleSettings : function() {
+            console.log('SETTINGS');
         }
     },
     computed : {

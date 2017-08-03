@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     padding: 1em;
 }
@@ -54,12 +55,28 @@ body {
     padding: 1em;
     box-sizing: border-box;
     margin-bottom: 1em;
+    font-size: 100%;
 }
 
 .button--reset {
     width: 100%;
+    background-color: blue;
 }
 
 .button--playpause {
+    background-color: green;
+}
 
+.button--settings,
+.button--playpause {
+    width: 50%;
+}
+
+.settings {
+
+}
+.settings input {
+    font-size: inherit;
+    line-height: 2;
+    border: 1px solid;
 }
