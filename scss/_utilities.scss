@@ -1,0 +1,34 @@
+$button-border-size: 1em;
+
+@mixin deepedge {
+    border-bottom: $button-border-size solid $white;
+    border-left: $button-border-size solid $white;
+    appearance: none;
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 0; 
+        height: 0; 
+        border-left: $button-border-size solid transparent;
+        border-right: $button-border-size solid transparent; 
+        border-top:$button-border-size solid $background;
+        display:block;
+        position: absolute;
+        top:0;
+        left: -$button-border-size * 2;
+    }
+
+    &:after {
+        content: '';
+        width: 0; 
+        height: 0; 
+        border-left: $button-border-size solid transparent;
+        border-right: $button-border-size solid transparent; 
+        border-bottom:$button-border-size solid $background;
+        display:block;
+        position: absolute;
+        top:100%;
+        right: -$button-border-size;
+    }
+}
