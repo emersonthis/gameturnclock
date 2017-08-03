@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'texta';
+    src: url('../fonts/texta_book-webfont.woff2') format('woff2'),
+         url('../fonts/texta_book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*@font-face {
+    font-family: 'texta';
+    src: url('fonts/texta_bookit-webfont.woff2') format('woff2'),
+         url('fonts/texta_bookit-webfont.woff') format('woff'),
+    font-weight: normal;
+    font-style: italic;
+}
+*/
+
+body {
+    font-size: 18px;
+    font-family: 'texta', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color : $black;
+}

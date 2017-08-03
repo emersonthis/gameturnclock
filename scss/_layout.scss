@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $background;
+}
+
+.container {
+    padding: 1em;
+}
+
+section + section {
+    margin-top: $vertical-gap;
+}

@@ -1,0 +1,31 @@
+.turn-clock .labels,
+.turn-clock .numbers {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+.turn-clock .labels {
+    font-size: 1em;
+}
+.turn-clock .label {
+    flex-basis: 33%;
+    flex-grow: 1;
+    text-align: center;
+}
+.turn-clock .numbers {
+    font-size: 20vw;
+    line-height:1;
+}
+.turn-clock .number {
+    flex-basis: 32%;
+    flex-grow: 1;
+}
+.turn-clock .numbers .sep {
+    flex-basis: 2%;
+    flex-shrink: 1;
+}
+.turn-clock .number,
+.turn-clock .sep {
+    text-align: center;
+}

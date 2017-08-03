@@ -1,0 +1,45 @@
+.button {
+    appearance: none;
+    color: #FFF;
+    border-radius: 0;
+    border:none;
+    outline: none;
+    background: #888;
+    padding: 2vw;
+    box-sizing: border-box;
+    /*margin-bottom: $vertical-gap;*/
+    font-size: 4vw;
+
+    @include deepedge;
+}
+
+.button + .button {
+    margin-top: $vertical-gap;
+}
+
+.button svg { 
+    display:inline-block; 
+    height: .8em;
+    width: .8em;
+}
+
+.button--reset {
+    width: 100%;
+    background-color: $blue;
+}
+
+.button--playpause {
+    background-color: $green;
+}
+
+.button--settings {
+    background-color: $camal;
+}
+
+.button--settings,
+.button--playpause {
+    width: 48%;
+}
+.button--playpause {
+    margin-left: 4%;
+}
