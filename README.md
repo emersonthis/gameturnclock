@@ -1,5 +1,5 @@
 # Game Turn Clock
-An free simple web app for tracking the length of turns while playing a game: http://gameturnclock.com
+An free simple web app for tracking the length of turns while playing a game: http://gameturntimer.com
 
 ## Developers
 
