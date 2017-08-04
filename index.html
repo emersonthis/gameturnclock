@@ -98,7 +98,8 @@ var app = new Vue({
         turnSeconds : 120,
         timer : null,
         state : 'pause',
-        settingsOpen : false
+        settingsOpen : false,
+        sound : new Audio()
     },
     methods : {
         tick : function(){
@@ -124,6 +125,8 @@ var app = new Vue({
             }
             this.timer = setInterval(this.tick, 1000);
             this.$data.state = 'play';
+
+            this.sound.src = 'sound/boxingbell.mp3';
         },
         pause : function(){
             clearInterval(this.timer);
@@ -134,8 +137,8 @@ var app = new Vue({
             this.announceTurnOver();
         },
         announceTurnOver : function() {
-            var sound = new Audio('sound/boxingbell.mp3');
-            sound.play();
+            
+            this.sound.play();
         },
         toggleSettings : function() {
             this.settingsOpen = !this.settingsOpen;
