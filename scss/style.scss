@@ -9,6 +9,12 @@ $background : #EDDDD4;
 
 $vertical-gap : 1rem;
 
+//breakpoint
+$phablet : 600px;
+$tablet : 768px;
+
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
+
 @import 'utilities';
 
 @import 'typography';

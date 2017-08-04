@@ -9,9 +9,12 @@ body {
 }
 
 .container {
-    padding: 1em;
+    padding: 1rem;
+    @include breakpoint($phablet) {
+        padding: 2rem;
+    }
 }
 
-section + section {
-    margin-top: $vertical-gap;
-}
+// section + section {
+//     margin-top: $vertical-gap;
+// }
