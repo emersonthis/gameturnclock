@@ -17,7 +17,6 @@
 <body>
 <div class="container" id="app">
     
-
     <turn-clock :seconds="turnSeconds"></turn-clock>
 
     <section class="buttons">
@@ -106,7 +105,7 @@ var app = new Vue({
             this.turnSeconds --;
             if (this.turnSeconds === 0) {
                 clearInterval(this.timer);
-                this.announceTurnOver();
+                this.turnOver();
             }
         },
         reset : function(){
@@ -120,6 +119,9 @@ var app = new Vue({
             }
         },
         play : function(){
+            if (this.turnSeconds <= 0) {
+                this.turnSeconds = this.totalSeconds;
+            }
             this.timer = setInterval(this.tick, 1000);
             this.$data.state = 'play';
         },
@@ -127,14 +129,16 @@ var app = new Vue({
             clearInterval(this.timer);
             this.$data.state = 'pause';
         },
+        turnOver : function(){
+            this.state = 'pause';
+            this.announceTurnOver();
+        },
         announceTurnOver : function() {
             var sound = new Audio('sound/boxingbell.mp3');
             sound.play();
-            console.log('TURN OVER!');
         },
         toggleSettings : function() {
             this.settingsOpen = !this.settingsOpen;
-            console.log('SETTINGS');
         }
     },
     computed : {
