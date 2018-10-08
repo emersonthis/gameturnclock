@@ -139,7 +139,7 @@ var app = new Vue({
             this.timer = setInterval(this.tick, 1000);
             this.$data.state = 'play';
 
-            this.sound.src = 'sound/hindu.mp3';
+            // this.sound.src = 'sound/hindu.mp3';
         },
         pause : function(){
 
@@ -155,7 +155,7 @@ var app = new Vue({
         },
         announceTurnOver : function() {
 
-            this.sound.play();
+            this.sound.src = 'sound/hindu.mp3';
         },
         toggleSettings : function() {
             this.settingsOpen = !this.settingsOpen;
@@ -167,6 +167,7 @@ var app = new Vue({
         }
     },
     mounted : function() {
+        this.sound.play();
     },
 });
 
