@@ -133,6 +133,8 @@ var app = new Vue({
 
             noSleep.enable();
 
+            this.sound.play();
+
             if (this.turnSeconds <= 0) {
                 this.turnSeconds = this.totalSeconds;
             }
@@ -167,7 +169,6 @@ var app = new Vue({
         }
     },
     mounted : function() {
-        this.sound.play();
     },
 });
 
