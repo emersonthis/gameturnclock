@@ -139,7 +139,7 @@ var app = new Vue({
             this.timer = setInterval(this.tick, 1000);
             this.$data.state = 'play';
 
-            this.sound.src = 'sound/boxingbell.mp3';
+            this.sound.src = 'sound/hindu.mp3';
         },
         pause : function(){
 
@@ -149,6 +149,7 @@ var app = new Vue({
             this.$data.state = 'pause';
         },
         turnOver : function(){
+            noSleep.disable();
             this.state = 'pause';
             this.announceTurnOver();
         },
